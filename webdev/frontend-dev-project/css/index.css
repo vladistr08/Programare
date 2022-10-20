@@ -1,0 +1,27 @@
+.input-container {
+      background-color:tomato;
+      margin: 0 auto;
+      padding: 1em;
+      height: 2.2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+.response-label{
+      display: none;
+}
+
+.output-container {
+      background-color:coral;
+      margin: 0 auto;
+      padding: 1em;
+      height: 2.2em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+}
+
+body{
+      background-color:tan;
+}

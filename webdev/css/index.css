@@ -1,0 +1,288 @@
+body {
+      margin: 0;
+      font-family: 'Montserrat', 'sans-serif';
+}
+
+p, blockquote {
+      font-size: .9em;
+      line-height: 1.6em;
+}
+
+ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+}
+
+.container {
+      text-align: center;
+      padding: .8em 1.2em;
+}
+
+.logo {
+      width: 130px;
+}
+
+
+.menu {
+      width: 25px;
+      margin-top: 45%;
+}
+
+header {
+      display: flex;
+      justify-content:space-between;
+}
+
+.server {
+      width: 30%;
+      margin: 2em auto 2em 25%;
+}
+
+h1, .subhead {
+      position: relative;
+      z-index: 3;
+}
+
+.subhead {
+      font-size: 1.3em;
+}
+
+.blue-container {
+      width: 100%;
+      background-color: cornflowerblue;
+      color: white;
+      margin-top: 15%;
+      padding: 4em 0 2em 0;
+      border-top-left-radius: 40px;
+      transform: skewY(-2deg);
+}
+
+.blue-container:before {
+      content: "";
+      width: 40px;
+      height: 40px;
+      background-color: cornflowerblue;
+      position: absolute;
+      top: -39px;
+      right: 0;
+      z-index: -2;
+}
+
+.blue-container:after {
+      content: "";
+      width: 80px;
+      height: 80px;
+      background-color: white;
+      top: -80px;
+      position: absolute;
+      right: 0;
+      border-radius: 50%;
+      z-index: -1;
+}
+
+.blue-container ul {
+      transform: skewY(2deg);
+}
+
+.blue-container ul li {
+      margin-bottom: 3em;
+}
+
+.blue-container ul li p{
+      padding: 0 .5em;
+}
+
+.blue-container img {
+      width: 14%;
+}
+
+.blue-container ul li:nth-child(3) img{
+      width: 15%;
+}
+
+.gray-container {
+      background-color:beige;
+      padding: 4em 0 2em;
+      margin-top: -3%;
+}
+
+.gray-container ul li:first-child {
+      margin-bottom: 2em;
+}
+
+figure {
+      margin: 0;
+      padding: 0;
+}
+
+figcaption {
+      font-weight: bold;
+      color:blueviolet;
+}
+
+h2 {
+      margin-top: 7%;
+}
+
+.cta {
+      background-color: yellowgreen;
+      width: calc(100% - 1em);
+      display: block;
+      border-radius: 20px;
+      padding: .5em;
+      text-decoration: none;
+      font-size: 1.5em;
+      margin: 3% 0 7%;
+      position: relative;
+      z-index: 4;
+}
+
+.footer-container {
+      width: 100%;
+      background-color: #3D444A;
+      color: white;
+      margin-top: 15%;
+      padding: 3em 0;
+      border-top-right-radius: 40px;
+      transform: skewY(2deg);
+}
+
+.footer-container:before {
+      content: "";
+      width: 40px;
+      height: 40px;
+      background-color: #3D444A;
+      position: absolute;
+      top: -39px;
+      left: 0;
+      z-index: -2;
+}
+
+.footer-container:after {
+      content: "";
+      width: 80px;
+      height: 80px;
+      background-color: white;
+      position: absolute;
+      z-index: -1;
+      top: -80px;
+      left: 0;
+      border-radius: 50%;
+}
+
+.footer-container .container{
+      transform: skewY(-2deg);
+}
+
+ul.footer-links {
+      margin: 0 auto;
+}
+
+ul.footer-links li{
+      display: inline-block;
+}
+
+ul.footer-links li a{
+      color: white;
+      font-size: .8em;
+}
+
+nav ul {
+      position: fixed;
+      width: 60%;
+      top: 0;
+      right: 0;
+      text-align: left;
+      background: rgb(36, 41, 44);
+      height: 100%;
+      z-index: 7;
+      padding: 3em;
+}
+
+nav ul li a {
+      color: white;
+      text-decoration: none;
+      display: block;
+      width: 100%;
+      padding: 1em 2em;
+      background-color: rgb(52, 59, 62);
+}
+
+nav ul li a:hover{
+      background-color: black;
+}
+
+.exit-btn{
+      margin-bottom: 1em;
+      margin-top: -1.3em;
+      text-align: right;
+      padding: 0 1.4em;
+}
+
+.exit-btn img {
+      width: 15px;
+      cursor: pointer;
+}
+
+.hide-mobile {
+      display: none;
+}
+
+@media only screen and (min-width: 650px){
+      .server{
+            width: 70%;
+      }
+      h1 {
+            font-size: 3em;
+            margin: 0;
+      }
+      .subhead {
+            font-size: 1.5em;
+            margin-bottom: 12%;
+      }
+      .blue-container {
+            margin: 0;
+      }
+      .blue-container img{
+            width: 20%;
+      }
+      .blue-container ul {
+            display: flex;
+            margin-top: -1em;
+            align-items: center;
+      }
+      .blue-container ul li {
+            margin-bottom: 0;
+      }
+      .blue-container ul li p {
+            padding: 0 .8em;
+      }
+      .gray-container ul{
+            display: flex;
+            align-items: center;
+      }
+      nav ul {
+            width: 40%;
+      }
+      .cta {
+            width: 40%;
+      }
+      .container {
+            width: 80%;
+            max-width: 0 auto;
+      }
+      .show-desktop {
+            display: block;
+            margin: 0 auto 13% auto;
+      }
+      .hide-desktop {
+            display: none;
+      }
+      nav ul {
+            position: inherit;
+            width: auto;
+            background: none;
+      }
+}
+
