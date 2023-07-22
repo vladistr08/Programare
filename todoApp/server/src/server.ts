@@ -6,6 +6,8 @@ import env from './config/env'
 
 import apolloConfig from './config/apollo-server-config'
 
+import {connectToDatabase} from './lib/db/CRUD'
+
 // configure express
 const app = express()
 app.use(bodyParser.json({ limit: '10mb' }))
@@ -19,6 +21,7 @@ const server = new ApolloServer(apolloConfig)
 server
     .start()
     .then(() => server.applyMiddleware({ app }))
+    .then(() => connectToDatabase())
     .then(() => app.listen({ port: env.PORT }))
     .then(() =>
         // eslint-disable-next-line

@@ -1,8 +1,10 @@
+import {connectToDatabase} from "../../lib/db/CRUD";
 
 
-export default (
+export default async (
     _: object,
     __: object
-): string => {
+): Promise<string> => {
+    await connectToDatabase()
     return "Salutare jupane"
 }
