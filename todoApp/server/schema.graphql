@@ -20,16 +20,68 @@ type User{
     email: String
 }
 
+type Todo{
+    todoId: String
+    userId: String
+    name: String
+    completed: Boolean
+    description: String
+    dueDate: String
+    priority: Int
+}
+
 type loginUserResult{
     user: User
 }
 
+input getAllTodosFilter{
+    userId: String!
+}
+
+type getAllTodosResult{
+    items: [Todo]
+}
+
 type Query{
     loginUser(input: loginUserInput!): loginUserResult
+    getAllTodos(filter: getAllTodosFilter!): getAllTodosResult
+}
+
+input addTodoFilter{
+    userId: String!
+    name: String!
+    description: String
+    completed: Boolean
+    priority: Int
+    dueDate: String
+}
+
+type addTodoResult{
+    todoId: String
+}
+
+input deleteTodoFilter{
+    todoId: String!
+}
+
+input todoPropsInput{
+    name: String
+    completed: Boolean
+    description: String
+    dueDate: String
+    priority: Int
+}
+
+input updateTodoFilter{
+    todoId: String!
+    props: todoPropsInput
 }
 
 type Mutation{
     createUser(input: createUserInput!): createUserResult
+    addTodo(filter: addTodoFilter!): addTodoResult
+    deleteTodo(filter: deleteTodoFilter!): Boolean
+    updateTodo(filter: updateTodoFilter!): Todo
 }
 
 schema {
