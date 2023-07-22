@@ -1,9 +1,35 @@
+input createUserInput{
+    username: String!
+    password: String!
+    email: String
+}
+
+type createUserResult{
+    userId: String
+}
+
+input loginUserInput{
+    username: String!
+    password: String!
+}
+
+type User{
+    userId: String
+    username: String
+    password: String
+    email: String
+}
+
+type loginUserResult{
+    user: User
+}
+
 type Query{
-    hello: String
+    loginUser(input: loginUserInput!): loginUserResult
 }
 
 type Mutation{
-    helloMutation: String
+    createUser(input: createUserInput!): createUserResult
 }
 
 schema {

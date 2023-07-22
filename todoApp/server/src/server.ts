@@ -6,7 +6,7 @@ import env from './config/env'
 
 import apolloConfig from './config/apollo-server-config'
 
-import {connectToDatabase} from './lib/db/CRUD'
+import {connectToDatabase} from './db'
 
 // configure express
 const app = express()
