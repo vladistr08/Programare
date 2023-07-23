@@ -42,12 +42,7 @@ type getAllTodosResult{
     items: [Todo]
 }
 
-type Query{
-    loginUser(input: loginUserInput!): loginUserResult
-    getAllTodos(filter: getAllTodosFilter!): getAllTodosResult
-}
-
-input addTodoFilter{
+input addTodoInput{
     userId: String!
     name: String!
     description: String
@@ -72,16 +67,21 @@ input todoPropsInput{
     priority: Int
 }
 
-input updateTodoFilter{
+input updateTodoInput{
     todoId: String!
     props: todoPropsInput
 }
 
+type Query{
+    loginUser(input: loginUserInput!): loginUserResult
+    getAllTodos(filter: getAllTodosFilter!): getAllTodosResult
+}
+
 type Mutation{
     createUser(input: createUserInput!): createUserResult
-    addTodo(filter: addTodoFilter!): addTodoResult
+    addTodo(input: addTodoInput!): addTodoResult
     deleteTodo(filter: deleteTodoFilter!): Boolean
-    updateTodo(filter: updateTodoFilter!): Todo
+    updateTodo(input: updateTodoInput!): Todo
 }
 
 schema {

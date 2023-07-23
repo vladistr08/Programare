@@ -2,8 +2,8 @@ import mongoose, { Schema } from 'mongoose'
 import { v4 as uuidv4 } from 'uuid'
 
 export interface ITodo {
-    todoId?: Schema.Types.UUID
-    userId: Schema.Types.UUID
+    todoId?: Schema.Types.UUID | string
+    userId: Schema.Types.UUID | string
     name: string
     completed?: boolean
     description?: string
