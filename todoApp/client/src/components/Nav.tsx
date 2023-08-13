@@ -1,14 +1,20 @@
-import React, {FC} from 'react';
+import React from 'react';
+import {Link} from "react-router-dom";
 
-const Nav: FC = () => {
+interface Props{
+    userId: string
+}
+
+const Nav = ({userId}: Props) => {
+
     return (
         <nav>
-            <div className="nav-wrapper deep-orange ">
+            <div className="nav-wrapper indigo darken-3 ">
                 <a href="#" className="brand-logo right">The true and only Task Manager</a>
                 <ul id="nav-mobile" className="left hide-on-med-and-down">
-                    <li><a href="sass.html">Sass</a></li>
-                    <li><a href="badges.html">Components</a></li>
-                    <li><a href="collapsible.html">JavaScript</a></li>
+                    <li><Link to="/login">Login</Link></li>
+                    <li><Link to="/Register">Register</Link></li>
+                    <li><Link to="/Home" state={{userId: userId}}>Home</Link></li>
                 </ul>
             </div>
         </nav>
